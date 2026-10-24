@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1024">
+  <meta name="description" content="TimeCapsule — a private, local-first digital memory vault.">
+  <title>TimeCapsule — Digital Memory Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/reset.css"><link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="TimeCapsule home"><img src="assets/images/logo.svg" alt=""><span>time<span class="brand-accent">capsule</span></span></a>
+      <div class="profile-mini"><div class="avatar">✦</div><div><strong id="sideName">Dream Keeper</strong><small>Your memory vault</small></div></div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a href="#home" data-route="home"><span>⌂</span> Overview</a>
+        <a href="#dashboard" data-route="dashboard"><span>◫</span> Dashboard</a>
+        <a href="#create" data-route="create"><span>✎</span> Create capsule</a>
+        <a href="#capsules" data-route="capsules"><span>▣</span> My capsules</a>
+        <a href="#timeline" data-route="timeline"><span>⌁</span> Timeline</a>
+        <a href="#gallery" data-route="gallery"><span>▧</span> Photo memories</a>
+        <a href="#settings" data-route="settings"><span>⚙</span> Settings</a>
+        <a href="#about" data-route="about"><span>ⓘ</span> About</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="storage-note"><span class="status-dot"></span><div><strong>Stored on this device</strong><small>Your memories stay local</small></div></div><button class="btn btn-ghost btn-full" id="themeBtn" type="button">☼ <span>Switch theme</span></button></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button><div class="breadcrumb"><span>YOUR PRIVATE UNIVERSE</span><strong id="pageTitle">Overview</strong></div><div class="top-actions"><span class="today" id="todayLabel"></span><button class="avatar avatar-small" id="profileBtn" title="Edit your display name" aria-label="Edit display name">✦</button></div></header>
+      <div id="app" class="page-content" tabindex="-1"></div>
+      <footer class="footer"><span>Made for the moments that matter.</span><span>✦ TimeCapsule <span id="year"></span></span></footer>
+    </main>
+  </div>
+  <div id="toastRegion" class="toast-region" role="status" aria-live="polite"></div>
+  <dialog id="confirmDialog" class="dialog"><form method="dialog"><div class="dialog-icon">✦</div><h2 id="dialogTitle">Are you sure?</h2><p id="dialogMessage">This action cannot be undone.</p><div class="dialog-actions"><button class="btn btn-ghost" value="cancel">Cancel</button><button class="btn btn-danger" id="confirmAction" value="confirm">Confirm</button></div></form></dialog>
+  <script src="assets/js/database.js"></script><script src="assets/js/validation.js"></script><script src="assets/js/countdown.js"></script><script src="assets/js/storage.js"></script><script src="assets/js/ui.js"></script><script src="assets/js/capsules.js"></script><script src="assets/js/editor.js"></script><script src="assets/js/timeline.js"></script><script src="assets/js/gallery.js"></script><script src="assets/js/settings.js"></script><script src="assets/js/app.js"></script>
+</body></html>
